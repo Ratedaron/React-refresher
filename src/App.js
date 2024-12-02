@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  presentCarName() {
+    return this.name
+  }
+}
+
+class Mod extends Car {
+  constructor(name, type) {
+    super(name)
+    this.type = type
+  }
+  show() {
+    return 'I have a ' + this.presentCarName() + ', its a ' + this.type
+  }
+}
+
+const myCar = new Mod("Lambo", "vuera")
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{myCar.show()}</h1>
     </div>
   );
 }
 
-export default App;
+
+export default App
