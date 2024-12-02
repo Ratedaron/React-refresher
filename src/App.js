@@ -1,30 +1,21 @@
 import './App.css'
 
-class Car {
-  constructor(name) {
-    this.name = name;
-  }
-  presentCarName() {
-    return this.name
-  }
+const arrowFunction = () => {
+  return "Hi there"
 }
 
-class Mod extends Car {
-  constructor(name, type) {
-    super(name)
-    this.type = type
-  }
-  show() {
-    return 'I have a ' + this.presentCarName() + ', its a ' + this.type
-  }
-}
+const smallFunction = () => "Hey there its me again"
 
-const myCar = new Mod("Lambo", "vuera")
+const funtionWithNumber = () => 1234256
 
 function App() {
   return (
     <div className="App">
-      <h1>{myCar.show()}</h1>
+      <h1>{arrowFunction()}</h1>
+      <br />
+      <h1>{smallFunction()}</h1>
+      <br />
+      <h1>{funtionWithNumber()}</h1>
     </div>
   );
 }
