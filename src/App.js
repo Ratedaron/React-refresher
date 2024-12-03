@@ -1,11 +1,20 @@
 import './App.css';
+import Car from './Car.js'
 
-const x = 9
-function App() {
+function Car1() {
+  return (
+    <h1>Hi I am a Car</h1>
+  );
+}
+
+function App(para) {
   return (
     <div className="App">
-      <h1>Quick Math: 5+5 is {5 + 5}</h1>
-      <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>
+      <h1>Who Is in this Gradge??</h1>
+      <Car1 />
+      <Car />
+      <br />
+      <h1>I'm driving a {para.color} car</h1>
     </div>
   );
 }
