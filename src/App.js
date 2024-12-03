@@ -1,24 +1,23 @@
 import './App.css';
 
-const vehicles = ['mustang', 'Ferari', 'f-150', 'f-40'];
-//const myArrayOfHeaders = ['Welcome', 'to', 'my', 'World'];
+function calc(a, b) {
+  const add = a + b
+  const subtract = a - b
+  const multiply = a * b
+  const divide = a / b
+  return [a, b, add, subtract, multiply, divide]
+}
 
-const [car, sportsCar, truck, plane] = vehicles
-
-const [car2, sportsCar2,, plane2 ] = vehicles
+const [a, b, add, subtract, multiply, divide] = calc(16893, 12345678)
 
 function App() {
   return (
     <div className="App">
-      <h1>{car}</h1>
-      <h1>{sportsCar}</h1>
-      <h1>{truck}</h1>
-      <h1>{plane}</h1>
-      <br />
-      <h1>And these are the Shorter ones</h1>
-      <h1>{car2}</h1>
-      <h1>{sportsCar2}</h1>
-      <h1>{plane2}</h1>
+      <h1>Number {a} and {b}</h1>
+      <h1>add = {add}</h1>
+      <h1>subtract {b} from {a} = {subtract}</h1>
+      <h1>multiply  = {multiply}</h1>
+      <h1>divide {a} with {b}  = {divide}</h1>
     </div>
   );
 }
