@@ -1,23 +1,32 @@
 import './App.css';
 
-function calc(a, b) {
-  const add = a + b
-  const subtract = a - b
-  const multiply = a * b
-  const divide = a / b
-  return [a, b, add, subtract, multiply, divide]
+const person = {
+  hobbies: ["reading", "hiking", "coding"],
+  lastName: "Doe",
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zipCode: "10001"
+  },
+  age: 30,
+  isEmployed: true,
+  firstName: "John",
+  greet: function () {
+    return `Hello, my name is ${this.firstName} ${this.lastName}.`;
+  }
+};
+
+function returnPersonInfo({ firstName, lastName, age, hobbies, address: { street } }) {
+  return `This person is called ${firstName} ${lastName}, is ${age} years old, likes to do ${hobbies[0]}, and lives on ${street}.`;
 }
 
-const [a, b, add, subtract, multiply, divide] = calc(16893, 12345678)
-
 function App() {
+  const message = returnPersonInfo(person);
+
   return (
     <div className="App">
-      <h1>Number {a} and {b}</h1>
-      <h1>add = {add}</h1>
-      <h1>subtract {b} from {a} = {subtract}</h1>
-      <h1>multiply  = {multiply}</h1>
-      <h1>divide {a} with {b}  = {divide}</h1>
+      <h1>{message}</h1>
     </div>
   );
 }
