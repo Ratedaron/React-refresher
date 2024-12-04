@@ -1,18 +1,17 @@
 import './App.css';
 
-function Football() {
-  const shoot = (a, b) => {
-    alert(a + " + " + b.type);
-  }
-  return (
-    <button id="button" onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
-  );
-}
-
-function App() {
+function App(props) {
+  const cars = props.cars
   return (
     <div className="App">
-      <h1>{Football()}</h1>
+      <h1>Garadge</h1>
+      {cars.length > 0 &&
+        <h1>You have {cars.length} Cars in Ya Garadge</h1>
+      }
+        {cars.length > 0 ?
+          <h1>You have {cars.length} Cars in ya Gardge (second If)</h1>
+          : <>ddd (second if)</>
+        }
     </div>
   );
 }

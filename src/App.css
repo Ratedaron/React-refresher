@@ -8,10 +8,3 @@
   display: flex;
   gap: 10px;
 }
-
-#button{
-  padding: 50px;
-  padding-top: 25px !important;
-  padding-bottom: 25px !important;
-  border-radius: 50px;
-}
