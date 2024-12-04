@@ -1,18 +1,18 @@
 import './App.css';
 
-function football() {
+function Football() {
   const shoot = (a, b) => {
-    alert(a + ' + ' + b.currentTarget)
+    alert(a + " + " + b.type);
   }
-
-  return (<button id="button" onClick={(event) => shoot("GOALLLL", event)}>Shooott</button>)
+  return (
+    <button id="button" onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
+  );
 }
-
 
 function App() {
   return (
     <div className="App">
-      {football()}
+      <h1>{Football()}</h1>
     </div>
   );
 }
